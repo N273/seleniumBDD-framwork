@@ -4,7 +4,7 @@ stages:
 
 build:
   stage: build
-  tags: ["d5ae8d25"]
+  tags: [6QgxEPvR]
   services: ["docker:stable-dind"]
   variables:
     DOCKER_HOST: tcp://localhost:2375
@@ -21,7 +21,7 @@ build:
 test:
   stage: test
   image: ${CI_REGISTRY_IMAGE}:latest
-  tags: ["d5ae8d25"]
+  tags: [6QgxEPvR]
   script:
     - |
       npm --version
