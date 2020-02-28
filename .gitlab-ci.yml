@@ -1,0 +1,36 @@
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  tags: ["hip-k8s"]
+  services: ["docker:stable-dind"]
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: ''
+  script: |
+    [ -f Dockerfile ] && DOCKERFILE_CHANGED=$(git diff HEAD~1 -- Dockerfile)
+    if [[ -n "${DOCKERFILE_CHANGED}" ]]; then
+      docker build -t ${CI_REGISTRY_IMAGE}:latest .
+      docker login -u gitlab-ci-token -p ${CI_JOB_TOKEN} ${CI_REGISTRY}
+      docker push ${CI_REGISTRY_IMAGE}:latest
+    fi
+
+test:
+  stage: test
+  image: ${CI_REGISTRY_IMAGE}:latest
+  tags: ["hip-k8s"]
+  script:
+    - |
+      npm --version
+      node --version
+      mvn --version
+      mvn compile -e
+      mvn clean install
+      mvn cluecumber-report:reporting
+  artifacts:
+    paths:
+      - /builds/digitalhub/test/seleniumBDDframwork/target/generated-report/index.html
+    expire_in: 30 days
