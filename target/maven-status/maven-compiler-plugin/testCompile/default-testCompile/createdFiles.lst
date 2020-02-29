@@ -1,0 +1,10 @@
+com\resourceWise\Hooks.class
+com\resourceWise\stepDefinitions\BasketSteps.class
+com\resourceWise\utility\DriverManager.class
+com\resourceWise\webPages\BasketPage.class
+com\resourceWise\webPages\ProductDescriptionPage.class
+com\resourceWise\webPages\SearchResultpage.class
+com\resourceWise\stepDefinitions\SearchSteps.class
+com\resourceWise\webPages\PaymentPage.class
+com\resourceWise\RunCukesTest.class
+com\resourceWise\webPages\HomePage.class

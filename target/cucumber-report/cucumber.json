@@ -1,0 +1,206 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 10709117300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "add product to basket",
+        "description": "",
+        "id": "basket-user-story-for-basket-functionality;add-product-to-basket",
+        "after": [
+          {
+            "result": {
+              "duration": 1103001900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 345774100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I am on the home page",
+            "match": {
+              "location": "SearchSteps.i_am_on_the_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3974159600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I search for a product \"nike\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "nike",
+                  "offset": 24
+                }
+              ],
+              "location": "SearchSteps.i_search_for_a_product(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3279314800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I select any product",
+            "match": {
+              "location": "BasketSteps.i_select_any_product()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 356600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I add the product to the basket",
+            "match": {
+              "location": "BasketSteps.i_add_the_product_to_the_basket()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the product should be in the basket",
+            "match": {
+              "location": "BasketSteps.the_product_should_be_in_the_basket()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Basket-user story for basket functionality",
+    "description": "As an end user\r\nI want to add a product to basket\r\nSo that i buy products",
+    "id": "basket-user-story-for-basket-functionality",
+    "keyword": "Feature",
+    "uri": "Basket.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@nk"
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 7153557400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "postive test for search",
+        "description": "",
+        "id": "search-product-name-of-user-story;postive-test-for-search",
+        "after": [
+          {
+            "result": {
+              "duration": 756655400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 14854300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I am on the home page",
+            "match": {
+              "location": "SearchSteps.i_am_on_the_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3407890800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I search for a product \"puma\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "puma",
+                  "offset": 24
+                }
+              ],
+              "location": "SearchSteps.i_search_for_a_product(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 46626100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I should to see respective results",
+            "match": {
+              "location": "SearchSteps.i_should_to_see_respective_results()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "search product-Name of user story",
+    "description": "As a customer\r\nI want to search for a product\r\nSo that i can add product to the basket",
+    "id": "search-product-name-of-user-story",
+    "keyword": "Feature",
+    "uri": "Search.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@nk"
+      }
+    ]
+  }
+]
